@@ -1,24 +1,53 @@
+:root {
+    /*Colors*/
+    --color-primary: darkblue;
+    --color-secondary: white;
+    --color-text: #333;
+    --color-bg: #eee;
+    --color-border: black;
+
+    /*Padding*/
+    --padding-small: 2px;
+    --padding-medium: 5px;
+    --padding-large: 10px;
+    --padding-xlarge: 20px;
+    --padding-rem: 1rem;
+
+    /*Borders*/
+    --border-thin: 1px solid black;
+    --border-thicker: 2px solid black;
+    --border-light: 1px solid rgb(0 0 0 / 0.2);
+
+    /*Shades*/
+    --shadow-gray: 0 0 30px gray;
+    --shadow-dark: 3px 3px 5px rgb(0,0,0);
+
+    /*Images sizes*/
+    --img-small: 150px;
+    --img-large: 200px;
+}
+
 nav {
-    background-color: darkblue;
-    padding: 10px;
+    background-color: var(--color-primary);
+    padding: var(--padding-large);
 }
 
 nav a {
-    color: white;
+    color: var(--color-secondary);
     display: block;
-    padding: 20px;
+    padding: var(--padding-xlarge);
 }
 
 h1 {
-    color: darkblue;
+    color: var(--color-primary);
 }
 
 img {
-    width: 150;
+    width: var(--img-small);
     height: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
+    border: var(--border-thin);
+    padding: var(--padding-small);
+    box-shadow: var(--shadow-gray);
 }
 
 p {
@@ -31,30 +60,30 @@ main {
 
 aside {
     width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 0.2); /* 1 */
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
+    margin: var(--padding-rem);
+    border: var(--border-light);
+    padding: var(--padding-rem);
+    background-color: var(--color-bg);
+    color: var(--color-text);
     text-align: center;
 }
 
 aside img {
-    width: 200px;
+    width: var(--img-small);
     height: auto;
 }
 
 main img {
-    width: 150px;
+    width: var(--img-small);
     height: auto;
-    border: 2px solid black;
-    padding: 5px;
-    box-shadow: 3px 3px 5px rgb(0, 0, 0);
+    border: var(--border-thicker);
+    padding: var(--padding-medium);
+    box-shadow: var(--shadow-dark);
 }
 
 footer {
     margin-top: 15px;
-    border-top: 1px solid #000;
+    border-top: var(--border-thin);
     text-align: center;
 }
 
