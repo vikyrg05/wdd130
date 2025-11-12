@@ -27,6 +27,17 @@
     --img-large: 200px;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: Roboto, Arial, sans-serif;
+
+}
 nav {
     background-color: var(--color-primary);
     padding: var(--padding-large);
@@ -60,31 +71,54 @@ main {
 
 aside {
     width: 20rem;
-    margin: var(--padding-rem);
-    border: var(--border-light);
-    padding: var(--padding-rem);
-    background-color: var(--color-bg);
-    color: var(--color-text);
     text-align: center;
+    position: relative;
 }
+
+/* color: var(--main-color); */
 
 aside img {
     width: var(--img-small);
     height: auto;
 }
 
+aside h2 {
+    position: absolute;
+    top: 40px;
+    left: 120px;
+}
 main img {
     width: var(--img-small);
     height: auto;
     border: var(--border-thicker);
     padding: var(--padding-medium);
     box-shadow: var(--shadow-dark);
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+
+p {
+    margin: 1rem;
 }
 
 footer {
     margin-top: 15px;
     border-top: var(--border-thin);
     text-align: center;
+}
+
+/* Class Selectors */
+
+.box {
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 1rem;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+.indent {
+    padding-left: 2rem;
 }
 
 
