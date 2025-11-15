@@ -79,7 +79,7 @@ footer {
     max-width: 300px;
 }
 
-.hero article img {
+.hero article figure img {
     float: right;
     width: 125px;
     border-radius: 50%;
@@ -87,7 +87,7 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-h1 {
+.hero-title {
     position: absolute;
     top: 20px;
     width: 100%;
@@ -95,5 +95,5 @@ h1 {
     text-align: center;
     opacity: 0.7;
     background-color: var(--accent1-color);
-    color: #fff; 
+    color: #fff;
 }
