@@ -33,6 +33,18 @@
     box-sizing: border-box;
 }
 
+nav a {
+    display: block;
+    color: var(--color-secondary);
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: var(--color-text);
+}
+
+nav a:hover {
+    background-color: brown;
+}
+
 body {
     font-size: 16px;
     font-family: Roboto, Arial, sans-serif;
@@ -41,16 +53,10 @@ body {
 nav {
     background-color: var(--color-primary);
     padding: var(--padding-large);
-}
-
-nav a {
-    color: var(--color-secondary);
-    display: block;
-    padding: var(--padding-xlarge);
-}
-
-h1 {
-    color: var(--color-primary);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 img {
@@ -61,12 +67,24 @@ img {
     box-shadow: var(--shadow-gray);
 }
 
-p {
-    padding: 0;
-}
-
 main {
     max-width: 840px;
+}
+
+main img {
+    width: var(--img-small);
+    height: auto;
+    border: var(--border-thicker);
+    padding: var(--padding-medium);
+    box-shadow: var(--shadow-dark);
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+
+h1 {
+    color: var(--color-primary);
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--color-primary);
 }
 
 aside {
@@ -87,31 +105,40 @@ aside h2 {
     top: 40px;
     left: 120px;
 }
-main img {
-    width: var(--img-small);
-    height: auto;
-    border: var(--border-thicker);
-    padding: var(--padding-medium);
-    box-shadow: var(--shadow-dark);
-    float: right;
-    margin: 0 0 1rem 1rem;
-}
 
 p {
     margin: 1rem;
+    padding: 0;
+}
+
+header, .grid, footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto 300px;
 }
 
 footer {
+    background-color: var(--color-primary);
     margin-top: 15px;
     border-top: var(--border-thin);
     text-align: center;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    padding: 1rem;
 }
 
 /* Class Selectors */
 
 .box {
     margin: 1rem;
-    border: 1px solid rgba(0, 0, 0, .1);
+    border: 1px solid #0a66c2;
     padding: 1rem;
     color: var(--color-text);
     background-color: var(--color-bg);
