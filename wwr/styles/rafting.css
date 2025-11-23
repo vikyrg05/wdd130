@@ -22,7 +22,7 @@ section {
     background: #ffffff;
     padding: 2rem;
     border-radius: 10px;
-    border: 2px solid #ccc;
+    border: 2px solid var(--secondary-color);
 }
 
 .content-box {
@@ -249,16 +249,22 @@ footer p {
     position: relative;
 }
 
-.hero > h1 {
+.hero > h1, .hero > article {
     position: absolute;
-}
-
-.hero > article {
-    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    top: 0; left: 0;
 }
 
 .hero img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.hero article img {
+    float: right;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
