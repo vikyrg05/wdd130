@@ -260,14 +260,16 @@ footer p {
     position: absolute;
     opacity: 0;
     pointer-events: none;
-    top: 0; left: 0;
+    top: 0; 
+    left: 0;
 }
 
 .hero > article {
     position: absolute;
     opacity: 0;
     pointer-events: none;
-    top: 0; left: 0;
+    top: 0; 
+    left: 0;
 }
 
 .hero img {
@@ -283,3 +285,14 @@ footer p {
     height: auto;
 }
 
+.hero {
+    position: relative;
+}
+
+.hero h1.hero-dummy, .hero article.hero-dummy-article {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
