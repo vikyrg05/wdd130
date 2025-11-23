@@ -270,10 +270,6 @@ footer p {
     height: auto;
 }
 
-.hero {
-    position: relative;
-}
-
 .hero-img {
     opacity: 0.01;
     height: 0.5px;
