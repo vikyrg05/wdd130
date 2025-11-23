@@ -158,6 +158,7 @@ header nav a:hover{
     font-family: var(--heading-font);
     color: var(--primary-color);
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .adventure-gallery {
@@ -247,9 +248,22 @@ footer p {
 
 .hero {
     position: relative;
+    max-width: 1100px;
+    margin: 2rem auto;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid var(--secondary-color);
 }
 
-.hero > h1, .hero > article {
+.hero > h1 {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    top: 0; left: 0;
+}
+
+.hero > article {
     position: absolute;
     opacity: 0;
     pointer-events: none;
@@ -264,7 +278,8 @@ footer p {
 
 .hero article img {
     float: right;
-    opacity: 0;
-    width: 0;
-    height: 0;
+    margin-left: 1rem;
+    max-width: 25%;
+    height: auto;
 }
+
