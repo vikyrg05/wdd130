@@ -256,26 +256,12 @@ footer p {
     border: 2px solid var(--secondary-color);
 }
 
-.hero > h1 {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-    top: 0; 
-    left: 0;
-}
-
-.hero > article {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-    top: 0; 
-    left: 0;
-}
-
 .hero img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
 }
 
 .hero article img {
@@ -289,10 +275,6 @@ footer p {
     position: relative;
 }
 
-.hero h1.hero-dummy, .hero article.hero-dummy-article {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
+.hero-img {
+    display: none;
 }
