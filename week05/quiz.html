@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz HTML y CSS</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+
+<body>
+
+    <h1>HTML and CSS Questionnaire</h1>
+
+    <form>
+
+        <h3>1. Fill in the blank: What tag is used to insert an image?</h3>
+        <label for="q1">Your answer: </label><br>
+        <input type="text" id="q1" name="q1" required><br><br>
+
+
+        <h3>2. Short answer: What does CSS stand for?</h3>
+        <label for="q2">Your answer: </label><br>
+        <textarea id="q2" name="q2" rows="3" required></textarea><br><br>
+
+        <h3>3. Choose one: Which property controls text size?</h3>
+        <label for="q3">Select an option</label><br>
+        <select id="q3" name="q3" required>
+            <option value="" selected disabled>Choose one...</option>
+            <option value="a">font-size</option>
+            <option value="b">text-size</option>
+            <option value="c">size-font</option>
+        </select><br><br>
+
+        <h3>4. Enter a number: How many heading levels does HTML have?</h3>
+        <label for="q4">Your answer: </label><br>
+        <input type="number" id="q4" name="q4" min="1" max="10" required><br><br>
+
+        <br>
+        <button type="submit">Submit Quiz</button>
+
+    </form>
+
+</body>
+
+</html>
