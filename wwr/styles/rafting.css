@@ -483,31 +483,39 @@ footer p {
     text-align: center;
 }
 
-body .home .hero {
+body.home .hero {
+    padding: 0;
+    border: none;
+    background: none;
+    border-radius: 0;
+    min-height: 70vh;
     position: relative;
-    width: 100%;
-    height: 60vh;
-    overflow: hidden;
 }
 
-body .home .hero img {
+body.home .hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 5s ease;
 }
 
-body .home .hero h1 {
+body.home .hero:hover img {
+    transform: scale(1.05);
+}
+
+body.home .hero h1 {
+    z-index: 2;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2.5rem;
+    color: var(--accent2-color);
+    font-size: 3rem;
     text-align: center;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-body .home .newsletter {
+body.home .newsletter {
     max-width: 600px;
     margin: 2rem auto;
     padding: 2rem;
@@ -517,34 +525,46 @@ body .home .newsletter {
     color: #ffffff;
 }
 
-body .home .newsletter h2 {
-    color: var(--accent2-color);
+body.home .newsletter h2 {
+    color: var(#ffffff);
 }
 
-body .home .newsletter-form {
+body.home .newsletter-form {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
     margin-top: 1rem;
 }
 
-body .home .newsletter-form label {
+body.home .newsletter-form label {
     color: #ffffff;
     font-weight: bold;
     display: block;
     text-align: left;
 }
 
-body .home .newsletter-form input {
+body.home .newsletter-form input {
     color: #ffffff;
     background-color: #555555;
+    border-radius: 8px;
 }
 
-body .home .newsletter-form input::placeholder{
+body.home .newsletter-form input:focus {
+    outline: none;
+    box-shadow: 0 0 6px var(--accent2-color);
+    border-color: var(--accent2-color);
+}
+
+.about-item:hover, .feature:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+body.home .newsletter-form input::placeholder{
     color: #dddddd;
 }
 
-body .home .newsletter-form button {
+body.home .newsletter-form button {
     padding: 0.8rem;
     border: none;
     border-radius: 6px;
@@ -556,13 +576,13 @@ body .home .newsletter-form button {
     width: 100%;
 }
 
-body .home .newsletter-form button:hover {
+body.home .newsletter-form button:hover {
     background-color: #004a97;
 }
 
 .cta {
     text-align: center;
-    margin: 3rem 0;
+    margin: 2rem 0;
 }
 
 .cta-button {
@@ -570,11 +590,11 @@ body .home .newsletter-form button:hover {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 15px 30px;
     background-color: var(--primary-color);
     color: white;
     font-weight: bold;
-    border-radius: 6px;
+    border-radius: 8px;
     text-decoration: none;
     text-align: center;
     transition: background 0.2s ease-in-out;
@@ -582,6 +602,14 @@ body .home .newsletter-form button:hover {
 
 .cta-button:hover {
     background-color: #004a97;
+}
+
+.cta-button, .newsletter-form button {
+    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+.cta-button:hover, .newsletter-form button:hover {
+    transform: scale(1.05);
 }
 
 .about-grid {
@@ -599,6 +627,7 @@ body .home .newsletter-form button:hover {
     padding: 1rem;
     border: 2px solid var(--secondary-color);
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-item img {
@@ -619,4 +648,35 @@ body .home .newsletter-form button:hover {
     color: var(--text-color);
     font-size: 1rem;
     line-height: 1.4;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.feature {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 2px solid var(--secondary-color);
+    text-align: center;
+}
+
+.feature img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.newsletter-form button {
+    grid-column: 1 / -1;
+    justify-self: center;
+    padding: 10px 20px;
 }
