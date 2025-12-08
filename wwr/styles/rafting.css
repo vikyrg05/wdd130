@@ -526,7 +526,7 @@ body.home .newsletter {
 }
 
 body.home .newsletter h2 {
-    color: var(#ffffff);
+    color:#ffffff;
 }
 
 body.home .newsletter-form {
@@ -751,7 +751,7 @@ body.home .newsletter-form button:hover {
 }
 
 .trips-gallery .about-item:hover {
-    transform: translate(-5);
+    transform: translate(-5px, -5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
