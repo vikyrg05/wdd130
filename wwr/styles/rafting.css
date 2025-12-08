@@ -581,8 +581,11 @@ body.home .newsletter-form button:hover {
 }
 
 .cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin: 2rem 0;
 }
 
 .cta-button {
@@ -632,7 +635,7 @@ body.home .newsletter-form button:hover {
 
 .about-item img {
     width: 100%;
-    height: 200px;
+    height: 140px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
@@ -679,4 +682,90 @@ body.home .newsletter-form button:hover {
     grid-column: 1 / -1;
     justify-self: center;
     padding: 10px 20px;
+}
+
+.trips-table {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.trips-table h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.trips-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.trips-table th, .trips-table td {
+    border: 1px solid #ccc;
+    padding: 0.8rem;
+    text-align: center;
+}
+
+.trips-table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.trips-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.trips-info-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.trips-info-grid aside.trips-table {
+    padding: 1rem;
+    border-radius: 8px;
+    border:2px solid var(--secondary-color);
+    background-color: white;
+}
+
+.trips-gallery {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.trips-gallery .about-item {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.trips-gallery .about-item:hover {
+    transform: translate(-5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.trips-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.trips-table th, .trips-table td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.trips-intro {
+    text-align: center;
 }
